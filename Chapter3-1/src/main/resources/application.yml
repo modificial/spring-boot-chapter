@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: chapter3
+  datasource:
+  #这里需要指定时区，否则会报错
+    url: jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=Hongkong&useUnicode=true&characterEncoding=utf-8
+    #我安装的是mysql8.0版本，驱动是这个
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  jpa:
+      database: MYSQL
+      show-sql: true
+      hibernate:
+        naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
+        #这句话会自动创建表
+        ddl-auto: create
+server:
+  address: 127.0.0.1
+  port: 8089
