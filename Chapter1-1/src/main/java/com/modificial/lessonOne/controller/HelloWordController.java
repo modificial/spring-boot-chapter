@@ -15,10 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWordController {
     /**
      * 测试输出HelloWord
+     *
      * @return
      */
-    @RequestMapping(value = "/index",method = RequestMethod.GET)
-    public String index(){
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    public String index() {
         return "HelloWord";
     }
 }
